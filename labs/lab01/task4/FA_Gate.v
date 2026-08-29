@@ -1,6 +1,4 @@
 // FA_Gate.v
-// (Carried forward from Task 2 -- paste in your completed, delay-annotated
-// version.)
 // Gate-level model of a 1-bit full adder, now with explicit gate delays.
 // From this task onward, every gate/assign you write in this lab should
 // have an explicit delay -- it's the default way we'll be writing Verilog
@@ -11,7 +9,6 @@
 // Do this for all five gates, then complete ripple_adder.v (this folder)
 // using this full adder, and simulate against tb.v.
 //
-
 // Part (b): after completing (a), change every gate's delay from a single
 // constant value to a RISE/FALL pair instead, e.g.:
 //   xor #(2,3) (ps, a, b);   // rise delay = 2, fall delay = 3
@@ -29,10 +26,17 @@ module FA_Gate(
 );
   wire ps, pc1, pc2;
 
-  xor (ps,  a,   b);
-  and (pc1, a,   b);
-  xor (sum, cin, ps);
-  and (pc2, cin, ps);
-  or  (cout, pc1, pc2);
+  // Part (a): a constant #(2) delay on every gate (kept as the committed
+  //           version -- the ripple settles well inside tb.v's 20-unit
+  //           windows with symmetric delays).
+  // Part (b): the rise/fall experiment (#(2,3)) is discussed in the manual
+  //           answer; with the slower fall delay the 4-bit ripple no
+  //           longer fully settles before the next stimulus, so it is not
+  //           the committed version.
+  xor #(2) (ps,  a,   b);
+  and #(2) (pc1, a,   b);
+  xor #(2) (sum, cin, ps);
+  and #(2) (pc2, cin, ps);
+  or  #(2) (cout, pc1, pc2);
 
 endmodule

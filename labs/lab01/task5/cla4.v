@@ -11,6 +11,7 @@
 //
 // TODO -- Step 2: direct (non-recursive) carry equations. Verilog's and/or
 // primitives accept more than 2 inputs directly, e.g.:
+
 //   and #(2) (t2, p1, p0, g0);
 // so you do not need to manually chain 2-input gates.
 //   c1 = g0 + p0.cin

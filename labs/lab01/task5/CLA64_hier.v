@@ -12,6 +12,7 @@
 //   - Reuse 16 four-bit CLA blocks (your cla4.v) -- their internal logic
 //     doesn't change.
 //   - For each block k, define:
+
 //       Gblk_k = "this block produces a carry regardless of its incoming
 //                 carry" -- a Boolean function of that block's own 4
 //                 bit-level Gi, Pi signals.

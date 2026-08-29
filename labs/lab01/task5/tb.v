@@ -13,6 +13,7 @@ module tb;
   dut DUT (
     .a    (t_a),
     .b    (t_b),
+    
     .cin  (t_cin),
     .sum  (t_sum),
     .cout (t_cout)

@@ -11,6 +11,7 @@
 // Do this for all five gates, then complete ripple_adder.v (this folder)
 // using this full adder, and simulate against tb.v.
 //
+
 // Part (b): after completing (a), change every gate's delay from a single
 // constant value to a RISE/FALL pair instead, e.g.:
 //   xor #(2,3) (ps, a, b);   // rise delay = 2, fall delay = 3

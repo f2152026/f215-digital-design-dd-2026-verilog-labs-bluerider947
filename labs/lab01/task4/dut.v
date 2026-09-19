@@ -1,4 +1,5 @@
 // dut.v
+// dut.v
 // Wrapper module: pick exactly ONE of the three implementations below by
 // leaving it uncommented, with the other two commented out. Compile and
 // run tb.v, then switch to a different implementation and repeat -- this

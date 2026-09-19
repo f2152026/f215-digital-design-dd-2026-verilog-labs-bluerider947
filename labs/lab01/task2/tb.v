@@ -9,6 +9,7 @@
 module tb;
   reg  [3:0] t_a, t_b;
   reg        t_cin;
+  
   wire [3:0] t_sum;
   wire       t_cout;
 

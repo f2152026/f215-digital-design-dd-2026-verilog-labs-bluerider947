@@ -14,6 +14,7 @@ module tb;
     .b    (t_b),
     .cin  (t_cin),
     .sum  (t_sum),
+    
     .cout (t_cout)
   );
 
